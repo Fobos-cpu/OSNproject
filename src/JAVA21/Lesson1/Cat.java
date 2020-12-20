@@ -1,6 +1,6 @@
 package JAVA21.Lesson1;
 
-public class Cat extends Animal implements Runner{
+public class Cat extends Animal implements Runner,HomeAnimal{
     @Override
     public void run() {
         System.out.println("Cat run");
@@ -17,6 +17,11 @@ public class Cat extends Animal implements Runner{
 
         Runner[] animals = {cat, dog, duck};
         Fly[] flyers = {duck,airBus};
+
+    }
+
+    @Override
+    public void homeAnimal() {
 
     }
 }
