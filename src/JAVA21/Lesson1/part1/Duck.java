@@ -1,4 +1,4 @@
-package JAVA21.Lesson1;
+package JAVA21.Lesson1.part1;
 
 public class Duck extends Animal implements Runner,Fly,HomeAnimal {
     @Override
@@ -14,6 +14,18 @@ public class Duck extends Animal implements Runner,Fly,HomeAnimal {
 
     @Override
     public void homeAnimal() {
+
+    }
+
+    @Override
+    public void method() {
+        System.out.println("Метод утки");
+    }
+
+
+    @Override
+    public void HomeAnimalMethod() {
+        System.out.println("Хоме метод собаки");
 
     }
 }
