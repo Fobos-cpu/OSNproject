@@ -1,4 +1,4 @@
-package JAVA21.Lesson1.part1;
+package JAVA2.Lesson1.part1;
 
 public class Dog extends Animal implements Runner{
     @Override
