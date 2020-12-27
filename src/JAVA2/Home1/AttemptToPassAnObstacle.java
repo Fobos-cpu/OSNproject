@@ -5,7 +5,7 @@ public interface AttemptToPassAnObstacle {
 
     void Run(String name);
 
-    void Jump();
+    void Jump(String name);
 
 
 

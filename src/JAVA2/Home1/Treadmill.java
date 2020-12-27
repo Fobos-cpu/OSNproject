@@ -1,15 +1,27 @@
 package JAVA2.Home1;
 
 
-public interface Treadmill extends AttemptToPassAnObstacle {
-    final double DISTANCE = 40.0;
+import java.util.Random;
 
-    public static void checkTreadmill(String name, double maxRun) {
+public interface Treadmill extends AttemptToPassAnObstacle {
+    final double DISTANCE = 50.0;
+
+    static boolean checkTreadmill(String name, double maxRun) {
         if (DISTANCE > maxRun) {
-            System.out.println(name + " Не пробежал дистанцию");
+            return false;
         } else {
-            System.out.println(name + " Пробежал дистанцию ");
+            return true;
         }
 
 
     }
+
+    static double calculatingMaxRun(double min, double max) {
+        Random random = new Random();
+        double range = max-min;
+        double randMaxPreRun = random.nextDouble()*range;
+        double randMaxRun = randMaxPreRun+min;
+        System.out.println(randMaxRun);
+        return randMaxRun;
+    }
+}
