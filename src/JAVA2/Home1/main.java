@@ -11,8 +11,8 @@ public class main {
        Human human1 = new Human("Сергей");
        Robot robot1 = new Robot("Электроник");
 
-       cat1.getName();
-       robot1.getName();
+       /*cat1.getName();
+       robot1.getName();*/
       /* cat1.getMaxLengthJump();*/
 
 
