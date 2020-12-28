@@ -1,9 +1,12 @@
 package JAVA2.Home1;
 
+import static JAVA2.Home1.Wall.calculatingMaxJump;
+import static JAVA2.Home1.Wall.checkWall;
+
 public class Human implements AttemptToPassAnObstacle{
 
-    private final double MaxLengthJump=30;
-    private final double MinLengthJump=25;
+    private final double MaxLengthJump=18;
+    private final double MinLengthJump=11;
     private final double MaxRun=90;
     private final double MinRun=50;
     private String name;
@@ -16,6 +19,9 @@ public class Human implements AttemptToPassAnObstacle{
         return MaxLengthJump;
     }
 
+    public double getMinLengthJump() {
+        return MinLengthJump;
+    }
     public double getMaxRun() {
         return MaxRun;
     }
@@ -38,7 +44,10 @@ public class Human implements AttemptToPassAnObstacle{
 
     @Override
     public void Jump(String name) {
-        System.out.println("Человек прыгнул");
+        if(Wall.checkWall(Human.this.name,calculatingMaxJump(getMinLengthJump(),getMaxLengthJump()))==true){
+            System.out.println(name + " , перепрыгнул стену");
+        }
+        else System.out.println(name +", не долетел");
     }
 
 }

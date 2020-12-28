@@ -7,11 +7,9 @@ public interface Treadmill extends AttemptToPassAnObstacle {
     final double DISTANCE = 50.0;
 
     static boolean checkTreadmill(String name, double maxRun) {
-        if (DISTANCE > maxRun) {
+        if (DISTANCE > maxRun)
             return false;
-        } else {
-            return true;
-        }
+         else return true;
 
 
     }
@@ -21,7 +19,7 @@ public interface Treadmill extends AttemptToPassAnObstacle {
         double range = max-min;
         double randMaxPreRun = random.nextDouble()*range;
         double randMaxRun = randMaxPreRun+min;
-        System.out.println(randMaxRun);
+        /*System.out.println(randMaxRun);*/
         return randMaxRun;
     }
 }

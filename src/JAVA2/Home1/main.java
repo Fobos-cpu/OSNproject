@@ -17,7 +17,7 @@ public class main {
 
 
        cat1.Run(cat1.getName());
-       cat1.Jump(human1.getName());
+       cat1.Jump(cat1.getName());
        human1.Run(human1.getName());
        human1.Jump(human1.getName());
        robot1.Run(robot1.getName());
